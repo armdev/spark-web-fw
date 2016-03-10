@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"       
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"     
+      xmlns:jsf="http://xmlns.jcp.org/jsf"    
+      xmlns:passthrough="http://xmlns.jcp.org/jsf/passthrough"     
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"> 
+
+    <f:view contracts="auth" transient="false">
+        <ui:composition template="/template.xhtml">  
+            <ui:define name="auth">
+                 <span class="offscreen error-code">404</span>
+                <div class="error-wrap">
+                    <div class="content-container content-container--error clearfix">
+                        <div class="media-body">
+                            <h2 class="headline">
+                                <span class="page-status">404 error.</span>
+
+                                Doggone it! The page you’re looking for cannot be found.
+
+                            </h2>
+
+                            <p class="message">
+                                Detective Darwin is hot on the case of the missing webpage!
+
+                                While he's sniffing out the problem, you should either <a href="#{request.contextPath}/index.jsf">go home</a> or search for what you need below. Elementary, my dear Yelper.
+                            </p>
+
+                          
+                                <label class="flex-box">
+                                    <span class="label-text">Search for</span>
+                                    <input type="text" name="find_desc" autofocus="true"/>
+                                </label>
+                                
+                                <label class="flex-box">
+                                    <span class="label-text">Near</span>
+                                    <input type="text" name="find_loc" id="find-loc"/>
+                                </label>
+                            
+                                   <button type="submit" class="ybtn ybtn-primary" value="Submit"><span>Search</span></button>
+                               
+                        </div>
+                    </div>
+                </div>
+
+            </ui:define>
+
+
+        </ui:composition>
+    </f:view>
+</html>
+
